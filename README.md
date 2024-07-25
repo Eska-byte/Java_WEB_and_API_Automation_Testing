@@ -17,7 +17,7 @@ Task:
         Step 6: archive test result
         Step 7: deploy to Github Pages
 
-Cara run project
+how to run project
 running command at local terminal: 
 for API test: ./gradlew apiAutoTest
 for WEB UI test: ./gradlew webUIAutoTest 

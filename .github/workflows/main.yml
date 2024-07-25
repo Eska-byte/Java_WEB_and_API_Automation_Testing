@@ -33,8 +33,26 @@ jobs:
     - name: Build with Gradle 8.5
       run: gradle build
 
-   #execute gradle command fur running web UI and API test
-    - name: Execute test
-      run: ./gradlew APIwebUIAutoTest
+   #execute gradle command for running API test
+    - name: Execute API test
+      run: ./gradlew apiAutoTest
+   #execute gradle command for running WEB UI test
+    - name: Execute WEB UI test
+      run: ./gradlew webUIAutoTest
       
- 
+   #archieve test result
+    - name: Archive Test Result
+      uses: actions/upload-pages-artifact@v3.0.1
+      if: always()
+      with: 
+        name: API and WEB UI report
+        path: reports
+
+    #deploy to Github Pages
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: reports
+    

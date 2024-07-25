@@ -13,7 +13,7 @@ public class webUtility {
     public static void getDriver(){
         ChromeOptions chrome = new ChromeOptions();
 
-//        chrome.addArguments("--headless");
+        chrome.addArguments("--headless");
         chrome.addArguments("--no-sandbox");
         chrome.addArguments("--disable-dev-shm-usage");
         chrome.addArguments("--remote-allow-origins=*");

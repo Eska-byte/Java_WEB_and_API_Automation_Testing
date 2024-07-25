@@ -53,8 +53,8 @@ tasks.register('APIwebUIAutoTest'){
                     '--plugin', 'pretty',
                     '--plugin', 'html:reports/cucumber-api-report.html',
                     '--glue', 'stepDef',
-                    '--tags', '@WEB', '@API',
-                    'src/test/java/feature'
+                    '--tags', '@API', '@WEB',
+                    'src/test/java/features'
             ]
         }
     }

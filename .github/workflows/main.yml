@@ -25,9 +25,13 @@ jobs:
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@v1.7.2
 
-    #setup gradlew
-    - name: Setup gradlew
-      run: chmod +x gradlew
+    #setup gradle
+    - name: Setup Gradle 8.5
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.5
+    - name: Build with Gradle 8.5
+      run: gradle build
 
    #execute gradle command fur running web UI and API test
     - name: Execute test

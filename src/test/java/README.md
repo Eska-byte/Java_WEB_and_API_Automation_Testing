@@ -1,6 +1,6 @@
-Deskripsi projek: tugas 20 module 22 (Github Actions for API and WEB UI Automation Testing)
+Project description: task 20 module 22 (Github Actions for API and WEB UI Automation Testing)
 
-Kerangka uji: UI WEB menggunakan Cucumber. Java, Gradle dan Selenium
+Libraries: Java, Rest Assured, Selenium, Cucumber and Json
 
 Task:
 -create API and WEB UI Automation project

@@ -14,10 +14,10 @@ Task:
         Step 3: install browser
         Step 4: setup gradle
         Step 5: execute gradle command for running API test and WEB UI test
-        Step 6: archieve test result
+        Step 6: archive test result
         Step 7: deploy to Github Pages
 
 Cara run project
 running command at local terminal: 
 for API test: ./gradlew apiAutoTest
-for WEB UI test: ./gradlew webUIAutoTest
+for WEB UI test: ./gradlew webUIAutoTest 

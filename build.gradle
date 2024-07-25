@@ -43,7 +43,7 @@ configurations {
     }
 }
 
-tasks.register('APIwebUIAutoTest'){
+tasks.register('webUIAutoTest'){
     dependsOn assemble, testClasses
     doLast {
         javaexec {
@@ -51,10 +51,26 @@ tasks.register('APIwebUIAutoTest'){
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
                     '--plugin', 'pretty',
-                    '--plugin', 'html:reports/cucumber-api-report.html',
-                    '--glue', 'stepDef',
-                    '--tags', '@API and @WEB',
-                    'src/test/java/features'
+                    '--plugin', 'html:reports/cucumber-webUI-report.html',
+                    '--glue', 'webUIstepDef',
+                    '--tags', '@WEB',
+                    'src/test/java/webUIfeature'
+            ]
+        }
+    }
+}
+tasks.register('apiAutoTest'){
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:reports/cucumber-API-report.html',
+                    '--glue', 'APIstepDef',
+                    '--tags', '@API',
+                    'src/test/java/APIfeature'
             ]
         }
     }

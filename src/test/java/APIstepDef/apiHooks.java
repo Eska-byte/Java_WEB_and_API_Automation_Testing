@@ -1,4 +1,4 @@
-package stepsDef.API;
+package APIstepDef;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
